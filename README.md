@@ -25,14 +25,14 @@ from outetts.wav_tokenizer.decoder import WavTokenizer
 
 
 !wget https://huggingface.co/novateur/WavTokenizer-medium-speech-75token/resolve/main/wavtokenizer_mediumdata_frame75_3s_nq1_code4096_dim512_kmeans200_attn.yaml
-!gdown 1-ASeEkrn4HY49yZWHTASgfGFNXdVnLTt
+!wget https://huggingface.co/novateur/WavTokenizer-large-speech-75token/resolve/main/wavtokenizer_large_speech_320_v2.ckpt
 
 
 from yarngpt.audiotokenizer import AudioTokenizerV2
 
-tokenizer_path="saheedniyi/YarnGPT2"
+tokenizer_path="ghananlpcommunity/yarnghana-tts"
 wav_tokenizer_config_path="/content/wavtokenizer_mediumdata_frame75_3s_nq1_code4096_dim512_kmeans200_attn.yaml"
-wav_tokenizer_model_path = "/content/wavtokenizer_large_speech_320_24k.ckpt"
+wav_tokenizer_model_path = "/content/wavtokenizer_large_speech_320_v2.ckpt"
 
 
 audio_tokenizer=AudioTokenizerV2(
