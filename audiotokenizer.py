@@ -199,9 +199,12 @@ class AudioTokenizerV2(AudioTokenizer):
             "code_start": "<|code_start|>",
             "code_end": "<|code_end|>",
             "text_sep": "<|text_sep|>",
-            "hausa":"<|hausa|>",
-            "igbo":"<|igbo|>",
-            "yoruba":"<|yoruba|>",
+            "twi": "<|twi|>",
+            "ewe": "<|ewe|>",
+            "dagbani": "<|dagbani|>",
+            "vagla": "<|vagla|>",
+            "ga": "<|ga|>",
+            "kasem": "<|kasem|>",
             "english":"<|english|>",#<|english|>
             "asr":"<|asr|>"
         }
@@ -242,7 +245,7 @@ class AudioTokenizerV2(AudioTokenizer):
         return self.load_speaker(speaker_path)
 
     def create_prompt(self,text,lang,speaker_name=None):
-        assert lang in ["hausa","igbo","yoruba","english"], f"Invalid language: {lang}, language must be one of ['hausa','igbo','yoruba','english']"
+        assert lang in ["twi","ewe","vagla","ga","kasem","dagbani","english"], f"Invalid language: {lang}, language must be one of ['twi','ewe','vagla','ga','dagbani','kasem','english']"
         #if no speaker
         dir=self.DEFAULT_SPEAKERS_DIR_LOCAL
         if speaker_name is None:
