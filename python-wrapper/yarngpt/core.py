@@ -11,11 +11,11 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 
 #define file paths
 CONFIG_PATH = os.path.join(MODEL_DIR, "wavtokenizer_mediumdata_frame75_3s_nq1_code4096_dim512_kmeans200_attn.yaml")
-MODEL_PATH = os.path.join(MODEL_DIR, "wavtokenizer_large_speech_320_24k.ckpt")
+MODEL_PATH = os.path.join(MODEL_DIR, "wavtokenizer_large_speech_320_v2.ckpt")
 
 #urls from Hugging Face
 CONFIG_URL = "https://huggingface.co/novateur/WavTokenizer-medium-speech-75token/resolve/main/wavtokenizer_mediumdata_frame75_3s_nq1_code4096_dim512_kmeans200_attn.yaml"
-MODEL_URL = "https://huggingface.co/novateur/WavTokenizer-large-speech-75token/resolve/main/wavtokenizer_large_speech_320_24k.ckpt"
+MODEL_URL = "https://huggingface.co/novateur/WavTokenizer-large-speech-75token/resolve/main/wavtokenizer_large_speech_320_v2.ckpt"
 
 def download_file(url, dest_path):
     """Downloads a file with a progress bar if it doesn't already exist."""
