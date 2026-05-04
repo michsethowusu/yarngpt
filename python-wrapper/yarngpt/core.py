@@ -48,7 +48,7 @@ AVAILABLE_SPEAKERS = [
 
 def load_model_and_tokenizer():
     """Loads the YarnGPT model and tokenizer."""
-    hf_path = "saheedniyi/YarnGPT"
+    hf_path = "ghananlpcommunity/yarnghana-tts"
 
     #initialize tokenizer
     audio_tokenizer = AudioTokenizer(hf_path, MODEL_PATH, CONFIG_PATH)
